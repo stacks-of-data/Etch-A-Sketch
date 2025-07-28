@@ -1,0 +1,20 @@
+* {
+    font-family: "Roboto";
+}
+
+body {
+    display: flex;
+    background-color: gray;
+    align-items: center;
+    flex-direction: column;
+}
+
+#sketch-container {
+    height: 60vh;
+    width: 60vw;
+    display: flex;
+}
+
+#sketch {
+    flex: 1;
+}
