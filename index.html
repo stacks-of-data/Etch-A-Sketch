@@ -1,21 +1,55 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Etch-A-Sketch</title>
-        <link rel="stylesheet" href="styles/style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <h1>Etch-A-Sketch</h1>
-        <div id="controls">
-            <button id="Generate" onclick="generateSketch()">Generate</button>
-            <button id="clear">Clear</button>
-        </div>
-        <div id="sketch-container">
+
+<head>
+    <title>Etch-A-Sketch</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="main-container">
+        <div id="design-container">
+            <h1>Etch-A-Sketch</h1>
+            <p>Size: <span id="size"></span></p>
+            <div id="controls">
+                <button id="Generate" onclick="sketch.generateSketch()">Generate</button>
+                <button id="clear" onclick="sketch.clearSketch()">Clear</button>
+            </div>
             <canvas id="sketch"></canvas>
         </div>
-        <script src="scripts/script.js"></script>
-    </body>
+        <div id="options-container">
+            <label for="brightnessRange">Brightness</label>
+            <input type="range" min="0" max="100" value="100" id="brightnessRange">
+            <label>Colors</label>
+            <div id="colors-container">
+                <div class="color-button" style="background-color: black;" onclick="sketch.setColor(Colors.BLACK)">
+                </div>
+                <div class="color-button" style="background-color: red;" onclick="sketch.setColor(Colors.RED)"></div>
+                <div class="color-button" style="background-color: green;" onclick="sketch.setColor(Colors.GREEN)">
+                </div>
+                <div class="color-button" style="background-color: blue;" onclick="sketch.setColor(Colors.BLUE)"></div>
+                <div class="color-button" style="background-color: magenta;" onclick="sketch.setColor(Colors.MAGENTA)">
+                </div>
+                <div class="color-button" style="background-color: yellow;" onclick="sketch.setColor(Colors.YELLOW)">
+                </div>
+                <div class="color-button" style="background-color: white;" onclick="sketch.setColor(Colors.WHITE)">
+                </div>
+                <div class="color-button" style="background-color: cyan;" onclick="sketch.setColor(Colors.CYAN)"></div>
+            </div>
+            <div id="random-colors-container">
+                <label for="randomColors">Random Colors</label>
+                <input type="checkbox" value="off" id="randomColors">
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <p>Made by stacks-of-data 2025</p>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+
 </html>

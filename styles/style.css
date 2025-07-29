@@ -3,18 +3,79 @@
 }
 
 body {
-    display: flex;
     background-color: gray;
+    margin: 0;
+    height: 100%;
+}
+
+#main-container {
+    display: flex;
+    justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+    min-height: 90vh;
+}
+
+#design-container {
+    display: flex;
+    align-items: center;
+    justify-items: center;
     flex-direction: column;
 }
 
-#sketch-container {
-    height: 60vh;
-    width: 60vw;
-    display: flex;
+#sketch {
+    margin-top: 10px;
+    border: 2px solid black;
 }
 
-#sketch {
+#controls {
+    display: flex;
+    justify-content: center;
+}
+
+#options-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1%;
+    border: 1px solid black;
+}
+
+#options-container * {
+    margin: 5px;
+}
+
+#colors-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 200px;
+}
+
+#randomColors {
+    width: 15px;
+    height: 15px;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #555555;
+}
+
+#footer p {
+    color: black;
+}
+
+.color-button {
+    border: 0;
+    margin: 0 !important;
+    width: 50px;
+    height: 50px;
+}
+
+button {
     flex: 1;
+    padding: 10%;
 }
